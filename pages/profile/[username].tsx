@@ -36,19 +36,6 @@ const User: FC <Props> = ( {setSelectedId, selectedId , likeNames, setLikeNames}
     console.log(likeNames)
   }
 
-  const likeDisabler = ():boolean => {
-    let search = null
-    if(likeNames){
-      search = likeNames.filter((name): string|void =>{if(name === selectedId)return name});
-    };
-
-    if(search){
-      return true
-    }else{
-      return false
-    }
-  }
-
 
   return (<>
     <div className="max-w-[40%] flex flex-col items-center justify-between space-y-12  border-purple-600 border">
@@ -58,7 +45,7 @@ const User: FC <Props> = ( {setSelectedId, selectedId , likeNames, setLikeNames}
     </div>
     <div className="flex w-[40%] justify-between pb-5">
         <button className="bg-purple-600 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded" onClick={()=>{setSelectedId("")}} >Back</button>
-        <button className="bg-purple-600 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded" disabled={likeDisabler()} onClick={()=>{likeHandler()}} >Like</button>
+        <button className="bg-purple-600 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded" onClick={()=>{likeHandler()}} >Like</button>
     </div>
   </>)
 
