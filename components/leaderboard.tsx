@@ -25,9 +25,9 @@ const LeaderboardView: FC <Props> = ( {leaderboard, setSelectedId, selectedId, l
     };
 
     const boardCreator = () => {
-        let userTags = leaderboard.map((item:{})=>{
+        let userTags = leaderboard.map((item:{},index:number)=>{
           return (
-            <div id={item.username} className="flex justify-between p-5 border-purple-600 border overflow-hidden" onClick={(e)=>clickHandler(e)}>
+            <div key={index} id={item.username} className="flex justify-between p-5 border-purple-600 border overflow-hidden" onClick={(e)=>clickHandler(e)}>
               <img id={item.username} className="w-[15%]" src={item.profileImage}></img>
               <div className="flex-col px-12">
                 <h1 className="text-2xl font-bold"> NAME: </h1>
