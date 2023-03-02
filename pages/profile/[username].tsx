@@ -11,7 +11,7 @@ type Props = {
 
 const User: FC <Props> = ( {setSelectedId, selectedId , likeNames, setLikeNames} ) => {
 
-  const [userInfo,setUserInfo] = useState<{}> ({})
+  const [userInfo,setUserInfo] = useState<any> ({})
 
   useEffect(()=>{
     //fetch the leaderboard data from the api 

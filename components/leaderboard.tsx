@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { LeaderboardData } from "../types";
+import { LeaderboardData} from "../types";
 import { FC, useEffect } from "react"
 
 type Props = {
@@ -7,7 +7,6 @@ type Props = {
     setSelectedId : (a:string)=>void
     selectedId : string
     likeNames : string[]
-    UserDetails: UserDetails
 }
 
 interface UserDetails {

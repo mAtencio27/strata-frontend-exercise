@@ -1,5 +1,6 @@
 import { LoremIpsum } from "lorem-ipsum";
 import { NextApiRequest, NextApiResponse } from "next";
+import { ProfileData } from "../../../types";
 var randomProfile = require("random-profile-generator");
 
 const lorem = new LoremIpsum({
