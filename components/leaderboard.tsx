@@ -3,7 +3,7 @@ import { LeaderboardData } from "../types";
 import { FC, useEffect } from "react"
 
 type Props = {
-    leaderboard : LeaderboardData | []
+    leaderboard : LeaderboardData[] | []
     setSelectedId : (a:string)=>void
     selectedId : string
     likeNames : string[]

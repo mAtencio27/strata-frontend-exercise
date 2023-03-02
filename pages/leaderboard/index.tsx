@@ -6,7 +6,7 @@ import LeaderboardView from "../../components/leaderboard"
 
 const Leaderboard: FC = () => {
 
-  const [leaderboard, setLeaderboard] = useState< LeaderboardData | []>([])
+  const [leaderboard, setLeaderboard] = useState<LeaderboardData[] | [] > ([])
   const [selectedId, setSelectedId] = useState<string>("")
   const [likeNames, setLikeNames] = useState<string[]>([])
 
