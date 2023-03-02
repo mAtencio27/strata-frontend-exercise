@@ -7,11 +7,18 @@ type Props = {
     setSelectedId : (a:string)=>void
     selectedId : string
     likeNames : string[]
+    UserDetails: UserDetails
 }
+
+interface UserDetails {
+    username: string;
+    profileImage: string;
+    score: number;
+  }
 
 const LeaderboardView: FC <Props> = ( {leaderboard, setSelectedId, selectedId, likeNames } ) => {
 
-    let clickHandler = (e: React.ChangeEvent<HTMLInputElement>):void => {
+    let clickHandler = (e:any):void => {
         setSelectedId(e.target.id)
     };
 
@@ -25,7 +32,7 @@ const LeaderboardView: FC <Props> = ( {leaderboard, setSelectedId, selectedId, l
     };
 
     const boardCreator = () => {
-        let userTags = leaderboard.map((item:{},index:number)=>{
+        let userTags = leaderboard.map((item:any,index:number)=>{
           return (
             <div key={index} id={item.username} className="flex justify-between p-5 border-purple-600 border overflow-hidden" onClick={(e)=>clickHandler(e)}>
               <img id={item.username} className="w-[15%]" src={item.profileImage}></img>
