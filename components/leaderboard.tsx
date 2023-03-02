@@ -9,13 +9,7 @@ type Props = {
     likeNames : string[]
 }
 
-interface UserDetails {
-    username: string;
-    profileImage: string;
-    score: number;
-  }
-
-const LeaderboardView: FC <Props> = ( {leaderboard, setSelectedId, selectedId, likeNames } ) => {
+const LeaderboardView: FC <Props> = ( {leaderboard, setSelectedId, likeNames } ) => {
 
     let clickHandler = (e:any):void => {
         setSelectedId(e.target.id)
