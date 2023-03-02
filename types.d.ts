@@ -1,14 +1,14 @@
-interface UserDetails {
+export interface UserDetails {
   username: string;
   profileImage: string;
   score: number;
 }
 
-type LeaderboardData = {
+export type LeaderboardData = {
   leaderboard: UserDetails[];
 };
 
-type ProfileData = {
+export type ProfileData = {
   username: string;
   bio: string;
   age: number;
