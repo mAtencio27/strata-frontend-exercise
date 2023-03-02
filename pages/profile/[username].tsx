@@ -37,8 +37,12 @@ const User: FC <Props> = ( {setSelectedId, selectedId , likeNames, setLikeNames}
   }
 
   const likeDisabler = ():boolean => {
-    let search = likeNames.filter((name): string|void =>{if(name === selectedId)return name});
-    if(search[0]){
+    let search = null
+    if(likeNames){
+      search = likeNames.filter((name): string|void =>{if(name === selectedId)return name});
+    };
+
+    if(search){
       return true
     }else{
       return false
